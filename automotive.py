@@ -3,6 +3,10 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import seaborn as sns
 
+st.write("DB username:", st.secrets["db_username"])
+st.write("DB password:", st.secrets["db_password"])
+st.write("My cool secrets:", st.secrets["my_cool_secrets"]["things_i_like"])
+
 st.sidebar.title('🏎 🚗')
 m=st.sidebar.radio('Navigation:',('home','corelation','model type','body type','fuel tank','engine','mileage','conclusion'), key='Navigation')
 
