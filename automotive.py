@@ -8,7 +8,7 @@ m=st.sidebar.radio('Navigation:',('home','corelation','model type','body type','
 
 st.title('🚗 Analysis on the type of car combimation is prefered by most automotive industries🚗')
 #importing the file
-df=pd.read_excel(r'https://github.com/simranjeet11/Automotive-Analysis/blob/main/cars_engage_2022.xlsx',engine='xlrd')
+df=pd.read_html(r'https://github.com/simranjeet11/Automotive-Analysis/blob/main/cars_engage_2022.xlsx')
 #cleaning data
 df.drop_duplicates(inplace=True) #drop the duplicates
 col=['Ex-Showroom_Price','Displacement','Fuel_Tank','Height','Length','Width','Highway_Mileage','City_Mileage','Kerb_Weight']
