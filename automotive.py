@@ -135,7 +135,7 @@ def home():
 
 def conc():
     st.subheader('conclusion:')
-    st.subheader('We  can comapare different entities with each other and extract the insigths, like what kind of model can a company release or what kind of model is in trend')
+    st.subheader('We can comapare different entities with each other and extract the insigths, like what kind of model can a company release or what kind of model is in trend')
 
 if(m=='home'):
     home()
