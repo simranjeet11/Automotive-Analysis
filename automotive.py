@@ -1,21 +1,7 @@
 import streamlit as st
-import string as str
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt 
-from sklearn.svm import SVC
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import plot_confusion_matrix, plot_roc_curve, plot_precision_recall_curve
-from sklearn.metrics import precision_score, recall_score 
-from sklearn.preprocessing import MinMaxScaler
-scaler = MinMaxScaler(feature_range=(0, 1))
-import warnings
-warnings.filterwarnings('ignore');
 import seaborn as sns
-from PIL import Image
 
 st.sidebar.title('🏎 🚗')
 m=st.sidebar.radio('Navigation:',('Home','corelation','model type','body type','fuel tank','engine','mileage'), key='Navigation')
@@ -143,10 +129,11 @@ def eng():
     sns.boxplot(data=x ,x='Ex-Showroom_Price' ,y='Engine_Location')
     st.write(fig)
 def home():
+    st.subheader('🏎 INTRODUCTION:')
+    st.subheader('This web app is on the production of different automotive industries choices of vehicles.')
+    st.subheader('In this web app, we compare each attribute to the ex-showroom price to observe the entities and how to affect the price.')
+    st.subheader('On the left sidebar on the screen, you can navigate the different criteria and select the industry.')
     
-    #st.image(,caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
-    st.image('https://www.google.com/imgres?imgurl=https%3A%2F%2Fmedia.gettyimages.com%2Fphotos%2Fview-of-cars-on-production-line-in-factory-picture-id723504579%3Fs%3D612x612&imgrefurl=https%3A%2F%2Fwww.gettyimages.com%2Fphotos%2Fautomobile-industry&tbnid=UZdWTwvLLt8jzM&vet=12ahUKEwj18-zR4__3AhVbz6ACHYxwDmgQMygAegUIARC2AQ..i&docid=wYitvSp6IrZl-M&w=612&h=408&q=automotive%20industry%20image%20url&client=firefox-b-d&ved=2ahUKEwj18-zR4__3AhVbz6ACHYxwDmgQMygAegUIARC2AQ', width=400)       
-
 if(m=='home'):
     home()
 elif(m=='corelation'):   
